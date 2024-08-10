@@ -115,7 +115,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--test_data', type=str,
                         default='test_new.pkl', help='root dir for data')
-    parser.add_argument('--model_dir', type=str, default="../experiments/optical_v0/best.pth.tar", help='model_dir')
+    parser.add_argument('--model_path', type=str, default="../experiments/optical_v0/best.pth.tar", help='model_dir')
 
     args = parser.parse_args()
     device = "cuda"
@@ -142,9 +142,9 @@ if __name__ == "__main__":
         compositor=AlphaCompositor(-0.01)
     )
     flow_net = raft_small(pretrained=True).cuda()
-    flow_net.load_state_dict(th.load(args.model_dir)["flow_state_dict"])
+    flow_net.load_state_dict(th.load(args.model_path)["flow_state_dict"])
     refine_net = Unet_multimodal(inshape=[64, 64, 64], infeats=3, outfeats=3).cuda()
-    refine_net.load_state_dict(th.load(args.model_dir)["refine_state_dict"])
+    refine_net.load_state_dict(th.load(args.model_path)["refine_state_dict"])
     focal = 732.24990637
     baseline = 4.552
     image_width = 512
