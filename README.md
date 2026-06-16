@@ -5,7 +5,8 @@ by Shizhan Gong, Yonghao Long, [Kai Chen](https://ck-kai.github.io/), Jiaqi Liu,
 [Yuliang Xiao](https://mikami520.github.io/), Alexis Cheng, Zerui Wang, and [Qi Dou](https://www.cse.cuhk.edu.hk/~qdou/index.html).
 
 ## Sample Results
-https://github.com/peterant330/SoftTissueDeformation/assets/22131710/6ba12cc4-6508-4e91-8250-86a56611534c
+https://github.com/user-attachments/assets/6ad0678a-71c2-4cfc-afde-df86866f707b
+
 
 ## Setup
 We recommend to set up the environment with the following command.
